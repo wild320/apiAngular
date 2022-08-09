@@ -19,10 +19,11 @@ export class ProductComponent implements OnInit {
   @Output () addedProduct = new EventEmitter<Product>();
 
   constructor() { }
-
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
+  
   onAddToCart(){
     this.addedProduct.emit(this.product);
   }
