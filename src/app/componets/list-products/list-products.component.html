@@ -4,6 +4,9 @@
 <p>
     Total: ${{total}}
 </p>
+<p>
+    Today: {{ today | date: "dd-MMM-yyyy" }}
+</p>
 <div class="products--grid">
     <app-product 
         [product]="product" 
