@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Product} from './models/product.models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  imgParent = '';
+  showImg = true;
+ 
+  onLoaded(img: string) {
+    console.log("Log padre", img);
+
+  }
+  toogleImg(){
+    this.showImg = !this.showImg;
+  }
 }
