@@ -1,13 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
-import {createProductDto, Product} from '../../models/product.models';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Product} from '../../models/product.models';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
   @Input() product:Product = {
     id:'',
     price:0,
@@ -16,17 +15,14 @@ export class ProductComponent implements OnInit {
     description:'',
     category:{
       id:0,
-      name:'',
-    }
+      name:''
+    },
   };
   @Output () addedProduct = new EventEmitter<Product>();
   @Output () showProduct = new EventEmitter<string>();
 
 
-  constructor() { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  constructor() { } 
 
   
   onAddToCart(){

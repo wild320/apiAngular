@@ -11,6 +11,7 @@ export interface Product{
     images: string[];
     description: string;
     category: Cateogry;
+    taxes?: number;
 }
 
 export interface createProductDto extends Omit<Product, 'id' | 'category'>{
